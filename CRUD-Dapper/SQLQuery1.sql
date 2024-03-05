@@ -1,4 +1,4 @@
-﻿CREATE TABLE Student (      
+﻿CREATE TABLE Students (      
   id int PRIMARY KEY IDENTITY,     
   admission_no VARCHAR(45) NOT NULL,  
   first_name VARCHAR(45) NOT NULL,      
@@ -7,7 +7,7 @@
   city VARCHAR(25) NOT NULL      
 );
 
-INSERT INTO Student (admission_no, first_name, last_name, age, city) VALUES
+INSERT INTO Students (admission_no, first_name, last_name, age, city) VALUES
 (3354,'Luisa', 'Evans', 13, 'Texas'),       
 (2135, 'Paul', 'Ward', 15, 'Alaska'),       
 (4321, 'Peter', 'Bennett', 14, 'California'),    

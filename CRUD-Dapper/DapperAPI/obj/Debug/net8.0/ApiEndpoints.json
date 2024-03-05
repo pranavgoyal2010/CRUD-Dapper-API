@@ -11,6 +11,22 @@
   },
   {
     "ContainingType": "DapperAPI.Controllers.StudentController",
+    "Method": "InsertStudent",
+    "RelativePath": "api/students",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentDto",
+        "Type": "ModelLayer.Dto.StudentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DapperAPI.Controllers.StudentController",
     "Method": "GetStudentById",
     "RelativePath": "api/students/{id}",
     "HttpMethod": "GET",

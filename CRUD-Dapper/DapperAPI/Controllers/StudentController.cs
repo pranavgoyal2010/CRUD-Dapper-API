@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Interface;
 using Microsoft.AspNetCore.Mvc;
+using ModelLayer.Dto;
 
 namespace DapperAPI.Controllers;
 
@@ -41,6 +42,21 @@ public class StudentController : ControllerBase
             }
 
             return Ok(student);
+        }
+        catch (Exception ex)
+        {
+            //log error
+            return StatusCode(500, ex.Message);
+        }
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> InsertStudent(StudentDto studentDto)
+    {
+        try
+        {
+            var createdStudent = await _studentBL.InsertStudent(studentDto);
+            return CreatedAtRoute("StudentById", new { id = createdStudent.id }, createdStudent);
         }
         catch (Exception ex)
         {

@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Interface;
+using ModelLayer.Dto;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
 
@@ -20,5 +21,10 @@ public class StudentBL : IStudentBL
     public Task<StudentEntity> GetStudentById(int id)
     {
         return _studentRL.GetStudentById(id);
+    }
+
+    public Task<StudentEntity> InsertStudent(StudentDto studentdto)
+    {
+        return _studentRL.InsertStudent(studentdto);
     }
 }

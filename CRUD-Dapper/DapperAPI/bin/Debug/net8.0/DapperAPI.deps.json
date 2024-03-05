@@ -434,11 +434,17 @@
           "BusinessLayer.dll": {}
         }
       },
+      "ModelLayer/1.0.0": {
+        "runtime": {
+          "ModelLayer.dll": {}
+        }
+      },
       "RepositoryLayer/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.28",
           "Microsoft.Data.SqlClient": "5.2.0",
-          "Microsoft.Extensions.Configuration": "8.0.0"
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "ModelLayer": "1.0.0"
         },
         "runtime": {
           "RepositoryLayer.dll": {}
@@ -775,6 +781,11 @@
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
     "BusinessLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ModelLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
