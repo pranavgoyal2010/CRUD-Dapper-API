@@ -19,7 +19,7 @@
     "Parameters": [
       {
         "Name": "studentDto",
-        "Type": "ModelLayer.Dto.StudentDto",
+        "Type": "ModelLayer.Dto.StudentCreateDto",
         "IsRequired": true
       }
     ],

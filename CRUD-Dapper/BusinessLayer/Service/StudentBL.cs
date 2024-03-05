@@ -23,7 +23,7 @@ public class StudentBL : IStudentBL
         return _studentRL.GetStudentById(id);
     }
 
-    public Task<StudentEntity> InsertStudent(StudentDto studentdto)
+    public Task<StudentEntity> InsertStudent(StudentCreateDto studentdto)
     {
         return _studentRL.InsertStudent(studentdto);
     }

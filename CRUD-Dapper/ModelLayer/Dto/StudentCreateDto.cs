@@ -1,6 +1,6 @@
 ﻿namespace ModelLayer.Dto;
 
-public class StudentDto
+public class StudentCreateDto
 {
     public string admission_no { get; set; }
     public string first_name { get; set; }

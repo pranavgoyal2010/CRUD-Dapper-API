@@ -7,31 +7,31 @@
       "RelativeMoniker": "D:0:0:{54EF9317-0FEE-49FB-9D9A-D0346FB0BF9E}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\service\\studentrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84AF6971-8631-4346-87D7-B5A95B97E1C4}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\businesslayer\\service\\studentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84AF6971-8631-4346-87D7-B5A95B97E1C4}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\studentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{54EF9317-0FEE-49FB-9D9A-D0346FB0BF9E}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\repositorylayer\\interface\\istudentrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54EF9317-0FEE-49FB-9D9A-D0346FB0BF9E}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\interface\\istudentrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84AF6971-8631-4346-87D7-B5A95B97E1C4}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\businesslayer\\interface\\istudentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84AF6971-8631-4346-87D7-B5A95B97E1C4}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\interface\\istudentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64722574-9327-4D14-A17C-794A0F6FF2A4}|DapperAPI\\DapperAPI.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\dapperapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64722574-9327-4D14-A17C-794A0F6FF2A4}|DapperAPI\\DapperAPI.csproj|solutionrelative:dapperapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__ProjectModels/Dapper/True/SqlTable/dbo.Students.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0214DB30-3886-48FE-AD61-E918FBDCA0A1}|ModelLayer\\ModelLayer.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\modellayer\\dto\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0214DB30-3886-48FE-AD61-E918FBDCA0A1}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\dto\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0214DB30-3886-48FE-AD61-E918FBDCA0A1}|ModelLayer\\ModelLayer.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\modellayer\\dto\\studentcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0214DB30-3886-48FE-AD61-E918FBDCA0A1}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\dto\\studentcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84AF6971-8631-4346-87D7-B5A95B97E1C4}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\businesslayer\\service\\studentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84AF6971-8631-4346-87D7-B5A95B97E1C4}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\studentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84AF6971-8631-4346-87D7-B5A95B97E1C4}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\businesslayer\\interface\\istudentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84AF6971-8631-4346-87D7-B5A95B97E1C4}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\interface\\istudentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64722574-9327-4D14-A17C-794A0F6FF2A4}|DapperAPI\\DapperAPI.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\dapperapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64722574-9327-4D14-A17C-794A0F6FF2A4}|DapperAPI\\DapperAPI.csproj|solutionrelative:dapperapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54EF9317-0FEE-49FB-9D9A-D0346FB0BF9E}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\prana\\desktop\\bridgelabz\\dapper\\crud-dapper-final\\crud-dapper\\repositorylayer\\entity\\studententity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,7 +73,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "SQLQuery1.sql ",
               "DocumentMoniker": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\SQLQuery1.sql",
               "RelativeDocumentMoniker": "SQLQuery1.sql",
@@ -84,12 +84,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StudentDto.cs",
-              "DocumentMoniker": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\ModelLayer\\Dto\\StudentDto.cs",
-              "RelativeDocumentMoniker": "ModelLayer\\Dto\\StudentDto.cs",
-              "ToolTip": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\ModelLayer\\Dto\\StudentDto.cs",
-              "RelativeToolTip": "ModelLayer\\Dto\\StudentDto.cs",
+              "DocumentIndex": 4,
+              "Title": "StudentCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\ModelLayer\\Dto\\StudentCreateDto.cs",
+              "RelativeDocumentMoniker": "ModelLayer\\Dto\\StudentCreateDto.cs",
+              "ToolTip": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\ModelLayer\\Dto\\StudentCreateDto.cs",
+              "RelativeToolTip": "ModelLayer\\Dto\\StudentCreateDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-05T06:52:07.546Z",
@@ -97,13 +97,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "StudentBL.cs",
               "DocumentMoniker": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\BusinessLayer\\Service\\StudentBL.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Service\\StudentBL.cs",
               "ToolTip": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\BusinessLayer\\Service\\StudentBL.cs",
               "RelativeToolTip": "BusinessLayer\\Service\\StudentBL.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA1wBsAAAA0AAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBsAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-04T12:23:53.091Z",
               "EditorCaption": ""
@@ -116,14 +116,14 @@
               "RelativeDocumentMoniker": "RepositoryLayer\\Service\\StudentRL.cs",
               "ToolTip": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\RepositoryLayer\\Service\\StudentRL.cs",
               "RelativeToolTip": "RepositoryLayer\\Service\\StudentRL.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAAACsAAAA0AAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAqwCUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-04T12:13:50.024Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "IStudentRL.cs",
               "DocumentMoniker": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\RepositoryLayer\\Interface\\IStudentRL.cs",
               "RelativeDocumentMoniker": "RepositoryLayer\\Interface\\IStudentRL.cs",
@@ -132,19 +132,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-04T12:10:34.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\DapperAPI\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "DapperAPI\\Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\DapperAPI\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "DapperAPI\\Controllers\\StudentController.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAgwDoAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T12:32:33.266Z",
               "EditorCaption": ""
             },
             {
@@ -161,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "IStudentBL.cs",
               "DocumentMoniker": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\BusinessLayer\\Interface\\IStudentBL.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Interface\\IStudentBL.cs",
@@ -174,12 +161,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "dbo.Students [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__ProjectModels/Dapper/True/SqlTable/dbo.Students.sql",
               "ToolTip": "dbo.Students [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2024-03-04T16:25:31.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\DapperAPI\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "DapperAPI\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\prana\\Desktop\\BridgeLabz\\Dapper\\CRUD-Dapper-Final\\CRUD-Dapper\\DapperAPI\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "DapperAPI\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAgwDoAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T12:32:33.266Z",
               "EditorCaption": ""
             },
             {
@@ -204,8 +204,7 @@
               "RelativeToolTip": "RepositoryLayer\\Entity\\StudentEntity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T11:57:46.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-04T11:57:46.986Z"
             },
             {
               "$type": "Document",

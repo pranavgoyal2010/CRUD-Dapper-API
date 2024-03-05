@@ -51,7 +51,7 @@ public class StudentController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> InsertStudent(StudentDto studentDto)
+    public async Task<IActionResult> InsertStudent(StudentCreateDto studentDto)
     {
         try
         {

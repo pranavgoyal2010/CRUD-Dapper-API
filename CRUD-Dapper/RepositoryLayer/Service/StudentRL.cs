@@ -37,7 +37,7 @@ public class StudentRL : IStudentRL
         }
     }
 
-    public async Task<StudentEntity> InsertStudent(StudentDto studentDto)
+    public async Task<StudentEntity> InsertStudent(StudentCreateDto studentDto)
     {
         var query = "INSERT INTO Students (admission_no, first_name, last_name, age, city) VALUES " +
             "(@admission_no, @first_name, @last_name, @age, @city);" +
