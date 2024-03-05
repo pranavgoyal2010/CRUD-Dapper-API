@@ -70,3 +70,4 @@ C:\Users\prana\Desktop\BridgeLabz\Dapper\CRUD-Dapper-Final\CRUD-Dapper\DapperAPI
 C:\Users\prana\Desktop\BridgeLabz\Dapper\CRUD-Dapper-Final\CRUD-Dapper\DapperAPI\obj\Debug\net8.0\DapperAPI.pdb
 C:\Users\prana\Desktop\BridgeLabz\Dapper\CRUD-Dapper-Final\CRUD-Dapper\DapperAPI\obj\Debug\net8.0\DapperAPI.genruntimeconfig.cache
 C:\Users\prana\Desktop\BridgeLabz\Dapper\CRUD-Dapper-Final\CRUD-Dapper\DapperAPI\obj\Debug\net8.0\ref\DapperAPI.dll
+C:\Users\prana\Desktop\BridgeLabz\Dapper\CRUD-Dapper-Final\CRUD-Dapper\DapperAPI\obj\Debug\net8.0\DapperAPI.sourcelink.json

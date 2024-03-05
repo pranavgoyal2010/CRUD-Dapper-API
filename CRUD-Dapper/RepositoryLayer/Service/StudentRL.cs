@@ -24,5 +24,14 @@ public class StudentRL : IStudentRL
             return students.ToList();
         }
     }
+    public async Task<StudentEntity> GetStudentById(int id)
+    {
+        var query = "SELECT * FROM Students WHERE id = @Id";
 
+        using (var connection = _context.CreateConnection())
+        {
+            var company = await connection.QuerySingleOrDefaultAsync<StudentEntity>(query, new { id });
+            return company;
+        }
+    }
 }

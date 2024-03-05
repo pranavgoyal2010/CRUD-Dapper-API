@@ -17,4 +17,8 @@ public class StudentBL : IStudentBL
         return _studentRL.GetStudents();
     }
 
+    public Task<StudentEntity> GetStudentById(int id)
+    {
+        return _studentRL.GetStudentById(id);
+    }
 }
