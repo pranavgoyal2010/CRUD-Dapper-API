@@ -72,9 +72,28 @@ public class StudentController : ControllerBase
         {
             var student = await _studentBL.GetStudentById(id);
             if (student == null)
-                return NotFound();
+                return BadRequest("Student with provided Id NOT found");
 
             await _studentBL.UpdateStudent(id, studentDto);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            //log error
+            return StatusCode(500, ex.Message);
+        }
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteCompany(int id)
+    {
+        try
+        {
+            var student = await _studentBL.GetStudentById(id);
+            if (student == null)
+                return BadRequest("Student with provided Id NOT found");
+
+            await _studentBL.DeleteStudent(id);
             return NoContent();
         }
         catch (Exception ex)

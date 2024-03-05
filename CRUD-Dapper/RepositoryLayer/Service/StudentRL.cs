@@ -85,4 +85,13 @@ public class StudentRL : IStudentRL
             await connection.ExecuteAsync(query, parameters);
         }
     }
+
+    public async Task DeleteStudent(int Id)
+    {
+        var query = "DELETE FROM Students WHERE id = @Id";
+        using (var connection = _context.CreateConnection())
+        {
+            await connection.ExecuteAsync(query, new { Id });
+        }
+    }
 }

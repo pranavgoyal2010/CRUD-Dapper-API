@@ -32,4 +32,9 @@ public class StudentBL : IStudentBL
     {
         _studentRL.UpdateStudent(Id, studentDto);
     }
+
+    public async Task DeleteStudent(int Id)
+    {
+        _studentRL.DeleteStudent(Id);
+    }
 }

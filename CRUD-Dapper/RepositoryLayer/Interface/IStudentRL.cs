@@ -9,4 +9,5 @@ public interface IStudentRL
     public Task<StudentEntity> GetStudentById(int id);
     public Task<StudentEntity> InsertStudent(StudentCreateDto studentDto);
     public Task UpdateStudent(int id, StudentUpdateDto studentDto);
+    public Task DeleteStudent(int id);
 }
