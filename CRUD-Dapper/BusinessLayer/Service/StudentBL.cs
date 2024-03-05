@@ -27,4 +27,9 @@ public class StudentBL : IStudentBL
     {
         return _studentRL.InsertStudent(studentdto);
     }
+
+    public async Task UpdateStudent(int Id, StudentUpdateDto studentDto)
+    {
+        _studentRL.UpdateStudent(Id, studentDto);
+    }
 }

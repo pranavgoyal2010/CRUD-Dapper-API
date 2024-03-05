@@ -64,4 +64,23 @@ public class StudentController : ControllerBase
             return StatusCode(500, ex.Message);
         }
     }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateCompany(int id, StudentUpdateDto studentDto)
+    {
+        try
+        {
+            var student = await _studentBL.GetStudentById(id);
+            if (student == null)
+                return NotFound();
+
+            await _studentBL.UpdateStudent(id, studentDto);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            //log error
+            return StatusCode(500, ex.Message);
+        }
+    }
 }

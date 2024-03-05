@@ -69,4 +69,20 @@ public class StudentRL : IStudentRL
         }
 
     }
+
+    public async Task UpdateStudent(int Id, StudentUpdateDto studentDto)
+    {
+        var query = "UPDATE Students SET admission_no = @admission_no, first_name = @first_name, last_name = @last_name, age = @age, city = @city WHERE id = @Id";
+        var parameters = new DynamicParameters();
+        parameters.Add("Id", Id, DbType.Int32);
+        parameters.Add("admission_no", studentDto.admission_no, DbType.String);
+        parameters.Add("first_name", studentDto.first_name, DbType.String);
+        parameters.Add("last_name", studentDto.last_name, DbType.String);
+        parameters.Add("age", studentDto.age, DbType.Int32);
+        parameters.Add("city", studentDto.city, DbType.String);
+        using (var connection = _context.CreateConnection())
+        {
+            await connection.ExecuteAsync(query, parameters);
+        }
+    }
 }
