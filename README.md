@@ -33,7 +33,7 @@ The project structure is organized as follows:
 
 ## Dependencies
 
-- .NET Framework
+- .NET Core
 - Dapper
 - SQL Server (or any other supported database)
 
