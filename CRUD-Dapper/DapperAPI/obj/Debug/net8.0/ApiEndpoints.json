@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "DapperAPI.Controllers.StudentController",
+    "Method": "GetStudents",
+    "RelativePath": "api/students",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
