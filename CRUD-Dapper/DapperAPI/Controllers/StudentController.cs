@@ -20,6 +20,10 @@ public class StudentController : ControllerBase
         try
         {
             var students = await _studentBL.GetStudents();
+            if (students == null)
+            {
+                return BadRequest("No students to display");
+            }
             return Ok(students);
         }
         catch (Exception ex)

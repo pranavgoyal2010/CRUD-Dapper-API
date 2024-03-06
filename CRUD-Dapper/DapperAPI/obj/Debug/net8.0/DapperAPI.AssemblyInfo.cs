@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DapperAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3aaf33f017a220bcd4fae197e004e6108c82afd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+115ef174b3e731042b8c68b2f1ff8f72df63079e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DapperAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DapperAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,7 +10,6 @@ namespace RepositoryLayer.Service;
 public class StudentRL : IStudentRL
 {
     private readonly AppDbContext _context;
-
     public StudentRL(AppDbContext context)
     {
         _context = context;
@@ -53,7 +52,24 @@ public class StudentRL : IStudentRL
 
         using (var connection = _context.CreateConnection())
         {
-            var Id = await connection.QuerySingleAsync<int>(query, parameters);
+            bool tableExists = await connection.QueryFirstOrDefaultAsync<bool>
+             ("SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Students'");
+
+            if (!tableExists)
+            {
+                // Create table if it doesn't exist
+                await connection.ExecuteAsync(@"
+                    CREATE TABLE Students (      
+                        id int PRIMARY KEY IDENTITY(1,1),     
+                        admission_no VARCHAR(45) NOT NULL,  
+                        first_name VARCHAR(45) NOT NULL,      
+                        last_name VARCHAR(45) NOT NULL,  
+                        age int,  
+                        city VARCHAR(25) NOT NULL      
+                    );");
+            }
+
+            var Id = await connection.ExecuteScalarAsync<int>(query, parameters);
             var createdStudent = new StudentEntity
             {
                 id = Id,
