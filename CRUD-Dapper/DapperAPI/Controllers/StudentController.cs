@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Interface;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Dto;
+using ModelLayer.Responses;
+using RepositoryLayer.Entity;
 
 namespace DapperAPI.Controllers;
 
@@ -14,16 +16,12 @@ public class StudentController : ControllerBase
         _studentBL = studentBL;
     }
 
-    [HttpGet]
+    /*[HttpGet]
     public async Task<IActionResult> GetStudents()
     {
         try
         {
             var students = await _studentBL.GetStudents();
-            if (students == null)
-            {
-                return BadRequest("No students to display");
-            }
             return Ok(students);
         }
         catch (Exception ex)
@@ -31,7 +29,35 @@ public class StudentController : ControllerBase
             //log error
             return StatusCode(500, ex.Message);
         }
+    }*/
+
+    [HttpGet]
+    public async Task<IActionResult> GetStudents() //<CreateStudentResponse<List<StudentEntity>>>> GetStudents()
+    {
+        try
+        {
+            var students = await _studentBL.GetStudents();
+
+            var response = new StudentResponseModel<List<StudentEntity>>
+            {
+                Message = "Students retrieved successfully",
+                //StatusCode = 200,
+                Data = students.ToList()
+            };
+            return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            var response = new StudentResponseModel<List<StudentEntity>>
+            {
+                Success = false,
+                Message = ex.Message,
+                Data = null // Set Data to null in case of error
+            };
+            return StatusCode(500, response);
+        }
     }
+
 
     [HttpGet("{id}", Name = "StudentById")]
     public async Task<IActionResult> GetStudentById(int id)
@@ -42,15 +68,35 @@ public class StudentController : ControllerBase
 
             if (student == null)
             {
-                return BadRequest("Student with provided Id NOT found");
+                var response = new StudentResponseModel<StudentEntity>
+                {
+                    Success = false,
+                    Message = "Student with provided Id NOT found",
+                    Data = null
+                };
+                return StatusCode(404, response);
             }
-
-            return Ok(student);
+            else
+            {
+                var response = new StudentResponseModel<StudentEntity>
+                {
+                    Message = "Student found succesfully",
+                    //StatusCode = 200,
+                    Data = student
+                };
+                return Ok(response);
+            }
         }
+
         catch (Exception ex)
         {
-            //log error
-            return StatusCode(500, ex.Message);
+            var response = new StudentResponseModel<StudentEntity>
+            {
+                Success = false,
+                Message = ex.Message,
+                Data = null
+            };
+            return StatusCode(500, response);
         }
     }
 
@@ -60,12 +106,25 @@ public class StudentController : ControllerBase
         try
         {
             var createdStudent = await _studentBL.InsertStudent(studentDto);
-            return CreatedAtRoute("StudentById", new { id = createdStudent.id }, createdStudent);
+
+            var response = new StudentResponseModel<StudentEntity>
+            {
+                Message = "Student inserted successfully",
+                Data = createdStudent
+            };
+            return CreatedAtRoute("StudentById", new { id = createdStudent.id }, response);
         }
         catch (Exception ex)
         {
             //log error
-            return StatusCode(500, ex.Message);
+            //return StatusCode(500, ex.Message);
+            var response = new StudentResponseModel<StudentEntity>
+            {
+                Success = false,
+                Message = ex.Message,
+                Data = null
+            };
+            return StatusCode(500, response);
         }
     }
 
@@ -75,16 +134,51 @@ public class StudentController : ControllerBase
         try
         {
             var student = await _studentBL.GetStudentById(id);
+            //if (student == null)
+            //    return BadRequest("Student with provided Id NOT found");
             if (student == null)
-                return BadRequest("Student with provided Id NOT found");
+            {
+                var response = new StudentResponseModel<StudentEntity>
+                {
+                    Success = false,
+                    Message = "Student with provided Id NOT found",
+                    Data = null
+                };
+                return NotFound(response);//BadRequest(response);
 
-            await _studentBL.UpdateStudent(id, studentDto);
-            return NoContent();
+            }
+            else
+            {
+                await _studentBL.UpdateStudent(id, studentDto);
+
+                /*var response = new StudentResponseModel<StudentEntity>
+                {
+                    Message = "Student updated successfully",
+                    StatusCode = 200,
+                    Data = student
+                };
+                return Ok(response);*/
+                /*var response = new StudentResponseModel<StudentEntity>
+                {
+                    Message = "Student updated successfully",
+                    StatusCode = 204, // Use 204 for No Content
+                    Data = null // No need to include data if returning NoContent
+                };*/
+                return NoContent();
+            }
+
         }
         catch (Exception ex)
         {
             //log error
-            return StatusCode(500, ex.Message);
+            var response = new StudentResponseModel<StudentEntity>
+            {
+                Success = false,
+                Message = ex.Message,
+                Data = null
+            };
+
+            return StatusCode(500, response);
         }
     }
 
@@ -94,16 +188,37 @@ public class StudentController : ControllerBase
         try
         {
             var student = await _studentBL.GetStudentById(id);
+            //if (student == null)
+            //    return BadRequest("Student with provided Id NOT found");
             if (student == null)
-                return BadRequest("Student with provided Id NOT found");
+            {
+                var response = new StudentResponseModel<StudentEntity>
+                {
+                    Success = false,
+                    Message = "Student with provided Id NOT found",
+                    Data = null
+                };
+                return NotFound(response);//BadRequest(response);
 
-            await _studentBL.DeleteStudent(id);
-            return NoContent();
+            }
+            else
+            {
+                await _studentBL.DeleteStudent(id);
+                return NoContent();
+            }
+
         }
         catch (Exception ex)
         {
             //log error
-            return StatusCode(500, ex.Message);
+            var response = new StudentResponseModel<StudentEntity>
+            {
+                Success = false,
+                Message = ex.Message,
+                Data = null
+            };
+
+            return StatusCode(500, response);
         }
     }
 }

@@ -16,3 +16,5 @@ INSERT INTO Students (admission_no, first_name, last_name, age, city) VALUES
 (6113, 'Marielia', 'Simmons', 15, 'Arizona'),    
 (7555,'Antonio', 'Butler', 14, 'New York'),       
 (8345, 'Diego', 'Cox', 13, 'California');
+
+DROP TABLE Students;
