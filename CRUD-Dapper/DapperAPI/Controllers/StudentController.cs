@@ -70,7 +70,7 @@ public class StudentController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateCompany(int id, StudentUpdateDto studentDto)
+    public async Task<IActionResult> UpdateStudent(int id, StudentUpdateDto studentDto)
     {
         try
         {
@@ -89,7 +89,7 @@ public class StudentController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteCompany(int id)
+    public async Task<IActionResult> DeleteStudent(int id)
     {
         try
         {
