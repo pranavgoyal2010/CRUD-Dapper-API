@@ -37,4 +37,9 @@ public class StudentBL : IStudentBL
     {
         _studentRL.DeleteStudent(Id);
     }
+
+    public async Task UserRegistrationConsumer(CancellationToken cancellationToken)
+    {
+        _studentRL.UserRegistrationConsumer(cancellationToken);
+    }
 }

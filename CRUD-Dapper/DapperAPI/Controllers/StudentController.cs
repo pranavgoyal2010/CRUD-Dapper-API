@@ -19,6 +19,12 @@ public class StudentController : ControllerBase
     {
         try
         {
+            var cancellationTokenSource = new CancellationTokenSource();
+            var cancellationToken = cancellationTokenSource.Token;
+            //calling consumer of 
+            await _studentBL.UserRegistrationConsumer(cancellationToken);
+            cancellationTokenSource.Cancel();
+
             var students = await _studentBL.GetStudents();
             if (students == null)
             {

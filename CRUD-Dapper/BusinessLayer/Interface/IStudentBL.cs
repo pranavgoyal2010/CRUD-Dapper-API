@@ -10,4 +10,5 @@ public interface IStudentBL
     public Task<StudentEntity> InsertStudent(StudentCreateDto studentDto);
     public Task UpdateStudent(int id, StudentUpdateDto studentDto);
     public Task DeleteStudent(int id);
+    public Task UserRegistrationConsumer(CancellationToken cancellationToken);
 }

@@ -1,5 +1,7 @@
-﻿using Dapper;
+﻿using Confluent.Kafka;
+using Dapper;
 using ModelLayer.Dto;
+using Newtonsoft.Json;
 using RepositoryLayer.Context;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
@@ -10,9 +12,11 @@ namespace RepositoryLayer.Service;
 public class StudentRL : IStudentRL
 {
     private readonly AppDbContext _context;
-    public StudentRL(AppDbContext context)
+    private readonly IConsumer<string, string> _consumer; // Kafka consumer
+    public StudentRL(AppDbContext context, IConsumer<string, string> consumer)
     {
         _context = context;
+        _consumer = consumer;
     }
 
     public async Task<IEnumerable<StudentEntity>> GetStudents()
@@ -80,11 +84,12 @@ public class StudentRL : IStudentRL
                 city = studentDto.city
             };
 
-
             return createdStudent;
         }
 
+
     }
+
 
     public async Task UpdateStudent(int Id, StudentUpdateDto studentDto)
     {
@@ -110,4 +115,37 @@ public class StudentRL : IStudentRL
             await connection.ExecuteAsync(query, new { Id });
         }
     }
+
+    public async Task UserRegistrationConsumer(CancellationToken cancellationToken)
+    {
+        _consumer.Subscribe("user-registration-topic");
+
+        try
+        {
+            while (!cancellationToken.IsCancellationRequested)
+            {
+
+                var consumeResult = _consumer.Consume(cancellationToken); // Consume messages
+
+                // Deserialize message payload to UserRegistrationEventData
+                var userEventData = JsonConvert.DeserializeObject<UserRegistrationEventData>(consumeResult.Message.Value);
+
+                // Process user registration data
+                Console.WriteLine($"Received user registration event: {userEventData.FirstName} {userEventData.LastName}, {userEventData.Email}");
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            // Close the consumer when cancelled
+            _consumer.Close();
+        }
+
+    }
+}
+
+public class UserRegistrationEventData
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Email { get; set; }
 }
