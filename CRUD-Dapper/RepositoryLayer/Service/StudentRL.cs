@@ -116,29 +116,34 @@ public class StudentRL : IStudentRL
         }
     }
 
-    public async Task UserRegistrationConsumer(CancellationToken cancellationToken)
+    // consumer for user registration of fundoo
+    public async Task UserRegistrationConsumer()
     {
         _consumer.Subscribe("user-registration-topic");
 
-        try
+        _ = Task.Run(async () =>
         {
-            while (!cancellationToken.IsCancellationRequested)
+            try
             {
+                while (true)
+                {
 
-                var consumeResult = _consumer.Consume(cancellationToken); // Consume messages
+                    var consumeResult = _consumer.Consume(); // Consume messages
 
-                // Deserialize message payload to UserRegistrationEventData
-                var userEventData = JsonConvert.DeserializeObject<UserRegistrationEventData>(consumeResult.Message.Value);
+                    // Deserialize message payload to UserRegistrationEventData
+                    var userEventData = JsonConvert.DeserializeObject<UserRegistrationEventData>(consumeResult.Message.Value);
 
-                // Process user registration data
-                Console.WriteLine($"Received user registration event: {userEventData.FirstName} {userEventData.LastName}, {userEventData.Email}");
+                    // Process user registration data
+                    Console.WriteLine($"Received user registration event: {userEventData.FirstName} {userEventData.LastName}, {userEventData.Email}");
+                }
             }
-        }
-        catch (OperationCanceledException)
-        {
-            // Close the consumer when cancelled
-            _consumer.Close();
-        }
+            catch (OperationCanceledException)
+            {
+                // Close the consumer when cancelled
+                _consumer.Close();
+            }
+        });
+
 
     }
 }

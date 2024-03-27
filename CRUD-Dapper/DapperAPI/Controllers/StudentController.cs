@@ -19,11 +19,8 @@ public class StudentController : ControllerBase
     {
         try
         {
-            var cancellationTokenSource = new CancellationTokenSource();
-            var cancellationToken = cancellationTokenSource.Token;
-            //calling consumer of 
-            await _studentBL.UserRegistrationConsumer(cancellationToken);
-            cancellationTokenSource.Cancel();
+            //calling consumer for user registration of fundoo
+            await _studentBL.UserRegistrationConsumer();
 
             var students = await _studentBL.GetStudents();
             if (students == null)
